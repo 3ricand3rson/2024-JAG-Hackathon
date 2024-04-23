@@ -1,12 +1,8 @@
 import numpy as np
 import pandas as pd
 
-array1 = np.arange(1, 100)
-array2 = []
+data = pd.read_excel("Crimes_Against_Society_Offenses_Offense_Category_by_Location_2022.xlsx", sheet_name="Table 19 NIBRS 2022")
 
-for x in array1:
-	array2.append(np.random.randint(1,100))
+Matrix = data.corr()
 
-matrix = np.corrcoef(array1, array2)
-
-print(matrix)
+print(Matrix)
